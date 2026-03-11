@@ -1,7 +1,11 @@
-import React from "react";
+"use client";
 
-const page = () => {
-	return <div>hello world</div>;
-};
+import { Header } from "@/components/header";
 
-export default page;
+export default function page() {
+	return (
+		<>
+			<Header />
+		</>
+	);
+}
