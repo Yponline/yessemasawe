@@ -48,10 +48,10 @@ export function MobileNav() {
 							))}
 						</div>
 						<div className="mt-12 flex flex-col gap-2">
-							<Button className="w-full" variant="outline">
+							{/* <Button className="w-full" variant="outline">
 								Sign In
 							</Button>
-							<Button className="w-full">Get Started</Button>
+							<Button className="w-full">Get Started</Button> */}
 						</div>
 					</div>
 				</Portal>
