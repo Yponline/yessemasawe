@@ -2,7 +2,6 @@ import { cn } from "@/lib/utils";
 import Logo from "@/components/logo";
 import { Button } from "@/components/ui/button";
 import {
-	FacebookIcon,
 	GithubIcon,
 	InstagramIcon,
 	LinkedinIcon,
@@ -11,10 +10,10 @@ import {
 
 export function Footer() {
 	return (
-		<footer className="relative">
+		<footer className="relative bg-black text-white">
 			<div
 				className={cn(
-					"mx-auto max-w-5xl lg:border-x",
+					"mx-auto max-w-5xl ",
 					"dark:bg-[radial-gradient(35%_80%_at_15%_0%,--theme(--color-foreground/.1),transparent)]",
 				)}>
 				<div className="absolute inset-x-0 h-px w-full bg-border" />
@@ -24,7 +23,7 @@ export function Footer() {
 							<Logo />
 						</a>
 						<p className="max-w-sm text-balance text-muted-foreground text-sm">
-							Beautify your app with efferd.
+							Bring your ideas in to reality with Yesse.
 						</p>
 						<div className="flex gap-2">
 							{socialLinks.map((item, index) => (
@@ -33,7 +32,7 @@ export function Footer() {
 									key={`social-${item.link}-${index}`}
 									size="icon-sm"
 									variant="outline">
-									<a href={item.link} target="_blank">
+									<a href={item.link} className="text-black" target="_blank">
 										{item.icon}
 									</a>
 								</Button>
@@ -67,10 +66,10 @@ export function Footer() {
 						</div>
 					</div>
 				</div>
-				<div className="absolute inset-x-0 h-px w-full bg-border" />
+				<div className="absolute inset-x-0 h-px w-full " />
 				<div className="flex max-w-4xl flex-col justify-between gap-2 py-4">
 					<p className="text-center font-light text-muted-foreground text-sm">
-						&copy; {new Date().getFullYear()} efferd, All rights reserved
+						&copy; {new Date().getFullYear()} Yesse Dev, All rights reserved
 					</p>
 				</div>
 			</div>
@@ -126,28 +125,24 @@ const resources = [
 
 const socialLinks = [
 	{
-		icon: <FacebookIcon />,
-		link: "#",
-	},
-	{
 		icon: <GithubIcon />,
-		link: "#",
+		link: "https://github.com/Yponline",
 	},
 	{
 		icon: <InstagramIcon />,
-		link: "#",
+		link: "https://www.instagram.com/yesse_masawe/",
 	},
 	{
 		icon: <LinkedinIcon />,
-		link: "#",
+		link: "https://www.linkedin.com/in/yese-massawe-901523270/",
 	},
 	{
 		icon: <XIcon />,
-		link: "#",
+		link: "https://x.com/Yesse_Masawe",
 	},
 	{
 		icon: <YoutubeIcon />,
-		link: "#",
+		link: "https://www.youtube.com/@yessemasawe",
 	},
 ];
 

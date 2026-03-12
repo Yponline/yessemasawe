@@ -30,9 +30,7 @@ export function Header() {
 					scrolled,
 			})}>
 			<nav className="mx-auto flex h-14 w-full max-w-5xl items-center justify-between px-4">
-				<a
-					className="rounded-md p-2 hover:bg-muted dark:hover:bg-muted/50"
-					href="#">
+				<a className="rounded-md p-2  dark:hover:bg-muted/50" href="/">
 					<Logo />
 				</a>
 				<div className="hidden items-center gap-2 md:flex">
