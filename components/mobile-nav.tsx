@@ -17,8 +17,7 @@ export function MobileNav() {
 				className="md:hidden"
 				onClick={() => setOpen(!open)}
 				size="icon"
-				variant="outline"
-			>
+				variant="outline">
 				{open ? (
 					<XIcon className="size-4.5" />
 				) : (
@@ -27,23 +26,23 @@ export function MobileNav() {
 			</Button>
 			{open && (
 				<Portal className="top-14" id="mobile-menu">
-					<PortalBackdrop />
+					{/* <PortalBackdrop /> */}
 					<div
 						className={cn(
 							"data-[slot=open]:zoom-in-97 ease-out data-[slot=open]:animate-in",
-							"size-full p-4"
+							"size-full p-4 bg-black",
 						)}
-						data-slot={open ? "open" : "closed"}
-					>
+						data-slot={open ? "open" : "closed"}>
 						<div className="grid gap-y-2">
 							{navLinks.map((link) => (
 								<Button
 									asChild
 									className="justify-start"
 									key={link.label}
-									variant="ghost"
-								>
-									<a href={link.href}>{link.label}</a>
+									variant="ghost">
+									<a href={link.href} className="text-white">
+										{link.label}
+									</a>
 								</Button>
 							))}
 						</div>

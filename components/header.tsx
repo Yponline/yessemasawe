@@ -25,8 +25,8 @@ export function Header() {
 
 	return (
 		<header
-			className={cn("sticky top-0 z-50 w-full border-transparent border-b", {
-				"border-border bg-background/95 backdrop-blur-sm supports-backdrop-filter:bg-background/50":
+			className={cn("sticky top-0 z-50 w-full border-transparent ", {
+				"border-border bg-background/15 backdrop-blur-sm supports-backdrop-filter:bg-background/10":
 					scrolled,
 			})}>
 			<nav className="mx-auto flex h-14 w-full max-w-5xl items-center justify-between px-4">
@@ -38,7 +38,9 @@ export function Header() {
 				<div className="hidden items-center gap-2 md:flex">
 					{navLinks.map((link) => (
 						<Button asChild key={link.label} size="sm" variant="ghost">
-							<a href={link.href}>{link.label}</a>
+							<a href={link.href} className="text-white">
+								{link.label}
+							</a>
 						</Button>
 					))}
 					{/* <Button size="sm" variant="outline">

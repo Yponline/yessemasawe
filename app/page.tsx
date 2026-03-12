@@ -5,11 +5,11 @@ import { Header } from "@/components/header";
 
 export default function page() {
 	return (
-		<>
-			<div className="h-screen">
+		<div>
+			<div className="h-screen bg-black">
 				<Header />
 			</div>
 			<Footer />
-		</>
+		</div>
 	);
 }
