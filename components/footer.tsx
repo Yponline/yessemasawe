@@ -5,6 +5,7 @@ import {
 	GithubIcon,
 	InstagramIcon,
 	LinkedinIcon,
+	X ,
 	YoutubeIcon,
 } from "lucide-react";
 
@@ -40,15 +41,14 @@ export function Footer() {
 						</div>
 					</div>
 					<div className="col-span-3 w-full md:col-span-1">
-						<span className="text-muted-foreground text-xs">Resources</span>
+						<span className="text-muted-foreground text-xs">Get In Touch</span>
 						<div className="mt-2 flex flex-col gap-2">
-							{resources.map(({ href, title }) => (
-								<a
-									className="w-max text-sm hover:underline"
-									href={href}
-									key={title}>
-									{title}
-								</a>
+							{contactCTA.map((item) => (
+								<li key={item.title} className="list-none">
+									<a href={item.href} className="w-max text-sm hover:underline">
+										{item.title}
+									</a>
+								</li>
 							))}
 						</div>
 					</div>
@@ -79,51 +79,26 @@ export function Footer() {
 
 const company = [
 	{
-		title: "About Us",
+		title: "ETL",
 		href: "#",
 	},
 	{
-		title: "Careers",
+		title: "BEATZA",
 		href: "#",
 	},
 	{
-		title: "Brand assets",
-		href: "#",
-	},
-	{
-		title: "Privacy Policy",
-		href: "#",
-	},
-	{
-		title: "Terms of Service",
+		title: "EventID",
 		href: "#",
 	},
 ];
 
-const resources = [
-	{
-		title: "Blog",
-		href: "#",
-	},
-	{
-		title: "Help Center",
-		href: "#",
-	},
-	{
-		title: "Contact Support",
-		href: "#",
-	},
-	{
-		title: "Community",
-		href: "#",
-	},
-	{
-		title: "Security",
-		href: "#",
-	},
+const contactCTA = [
+	{ title: "Hire Me / Let's Talk", href: "/contact" },
+	{ title: "Book a Call", href: "https://cal.com/yesse-masawe" }, // or whatever you use
+	{ title: "Email", href: "mailto:hello@yessemasawe.com" }, // change to your real email
 ];
 
-const socialLinks = [
+export const socialLinks = [
 	{
 		icon: <GithubIcon />,
 		link: "https://github.com/Yponline",
@@ -137,7 +112,7 @@ const socialLinks = [
 		link: "https://www.linkedin.com/in/yese-massawe-901523270/",
 	},
 	{
-		icon: <XIcon />,
+		icon: <X />,
 		link: "https://x.com/Yesse_Masawe",
 	},
 	{

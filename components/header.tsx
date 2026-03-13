@@ -4,11 +4,12 @@ import Logo from "@/components/logo";
 import { useScroll } from "@/hooks/use-scroll";
 import { Button } from "@/components/ui/button";
 import { MobileNav } from "@/components/mobile-nav";
+import Link from "next/link";
 
 export const navLinks = [
 	{
 		label: "Home",
-		href: "#home",
+		href: "/",
 	},
 	{
 		label: "About Me",
@@ -36,9 +37,9 @@ export function Header() {
 				<div className="hidden items-center gap-2 md:flex">
 					{navLinks.map((link) => (
 						<Button asChild key={link.label} size="sm" variant="ghost">
-							<a href={link.href} className="text-white">
+							<Link href={link.href} className="text-white">
 								{link.label}
-							</a>
+							</Link>
 						</Button>
 					))}
 					{/* <Button size="sm" variant="outline">
