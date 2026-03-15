@@ -11,7 +11,7 @@ export default function page() {
 				<Header />
 			</div>
 
-			<Hero />
+			<Hero className="relative min-h-screen flex items-center justify-center bg-linear-to-br from-zinc-950 via-zinc-900 to-black overflow-hidden py-10" />
 
 			<Footer />
 		</div>

@@ -2,9 +2,13 @@
 import Image from "next/image"; // or your image component
 import { socialLinks } from "./footer";
 
-export default function Hero() {
+interface Props {
+	className?: string;
+}
+
+export default function Hero({ className }: Props) {
 	return (
-		<section className="relative min-h-screen flex items-center justify-center bg-linear-to-br from-zinc-950 via-zinc-900 to-black overflow-hidden">
+		<section className={className}>
 			{/* Subtle radial gradient overlay for depth */}
 			<div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.08),transparent_50%)]" />
 
